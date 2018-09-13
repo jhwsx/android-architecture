@@ -18,6 +18,7 @@ package com.example.android.architecture.blueprints.todoapp.tasks;
 
 /**
  * Used with the filter spinner in the tasks list.
+ * 任务过滤类型
  */
 public enum TasksFilterType {
     /**
