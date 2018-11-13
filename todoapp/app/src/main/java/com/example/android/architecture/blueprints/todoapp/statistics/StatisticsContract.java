@@ -25,13 +25,28 @@ import com.example.android.architecture.blueprints.todoapp.BaseView;
 public interface StatisticsContract {
 
     interface View extends BaseView<Presenter> {
-
+        /**
+         * 设置进度指示器
+         * @param active
+         */
         void setProgressIndicator(boolean active);
 
+        /**
+         * 显示统计结果
+         * @param numberOfIncompleteTasks
+         * @param numberOfCompletedTasks
+         */
         void showStatistics(int numberOfIncompleteTasks, int numberOfCompletedTasks);
 
+        /**
+         * 显示加载统计出错
+         */
         void showLoadingStatisticsError();
 
+        /**
+         * 判断 View 是否活跃
+         * @return
+         */
         boolean isActive();
     }
 
