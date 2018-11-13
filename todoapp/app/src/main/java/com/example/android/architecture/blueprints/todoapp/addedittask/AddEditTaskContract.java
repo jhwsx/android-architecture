@@ -25,24 +25,49 @@ import com.example.android.architecture.blueprints.todoapp.BaseView;
 public interface AddEditTaskContract {
 
     interface View extends BaseView<Presenter> {
-
+        /**
+         * 显示空任务错误
+         */
         void showEmptyTaskError();
 
+        /**
+         * 显示任务列表
+         */
         void showTasksList();
 
+        /**
+         * 设置任务标题
+         * @param title
+         */
         void setTitle(String title);
 
+        /**
+         * 设置任务描述
+         * @param description
+         */
         void setDescription(String description);
 
+        /**
+         * 判断 View 是否活跃
+         * @return
+         */
         boolean isActive();
     }
 
     interface Presenter extends BasePresenter {
-
+        /**
+         * 保存任务
+         * @param title
+         * @param description
+         */
         void saveTask(String title, String description);
 
         void populateTask();
 
+        /**
+         * 是否是数据丢失
+         * @return
+         */
         boolean isDataMissing();
     }
 }

@@ -25,40 +25,92 @@ import com.example.android.architecture.blueprints.todoapp.BaseView;
 public interface TaskDetailContract {
 
     interface View extends BaseView<Presenter> {
-
+        /**
+         * 设置加载指示器
+         * @param active
+         */
         void setLoadingIndicator(boolean active);
 
+        /**
+         * 显示缺少任务
+         */
         void showMissingTask();
 
+        /**
+         * 隐藏标题
+         */
         void hideTitle();
 
+        /**
+         * 显示标题
+         * @param title
+         */
         void showTitle(String title);
 
+        /**
+         * 隐藏描述
+         */
         void hideDescription();
 
+        /**
+         * 显示描述
+         * @param description
+         */
         void showDescription(String description);
 
+        /**
+         * 显示完成状态
+         * @param complete
+         */
         void showCompletionStatus(boolean complete);
 
+        /**
+         * 显示编辑任务页面
+         * @param taskId
+         */
         void showEditTask(String taskId);
 
+        /**
+         * 显示任务删除
+         */
         void showTaskDeleted();
 
+        /**
+         * 显示任务标记完成
+         */
         void showTaskMarkedComplete();
 
+        /**
+         * 显示任务标记活跃
+         */
         void showTaskMarkedActive();
 
+        /**
+         * 判断 View 是否活跃
+         * @return
+         */
         boolean isActive();
     }
 
     interface Presenter extends BasePresenter {
-
+        /**
+         * 编辑任务
+         */
         void editTask();
 
+        /**
+         * 删除任务
+         */
         void deleteTask();
 
+        /**
+         * 标记完成任务
+         */
         void completeTask();
 
+        /**
+         * 激活任务
+         */
         void activateTask();
     }
 }

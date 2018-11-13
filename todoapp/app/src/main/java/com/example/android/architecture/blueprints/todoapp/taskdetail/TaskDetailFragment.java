@@ -172,6 +172,7 @@ public class TaskDetailFragment extends Fragment implements TaskDetailContract.V
         getActivity().finish();
     }
 
+    @Override
     public void showTaskMarkedComplete() {
         Snackbar.make(getView(), getString(R.string.task_marked_complete), Snackbar.LENGTH_LONG)
                 .show();
